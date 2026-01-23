@@ -11,7 +11,7 @@ const passport = require('passport')
 const passportLocalMongoose = require('passport-local-mongoose');
 const passportLocal = require('passport-local')
 const session = require('express-session')
-const port = 3005;
+const PORT = process.env.PORT || 3000;
 
 
 const mongo_url = process.env.MONGO_URL;
@@ -93,6 +93,6 @@ res.send("order saved successfully");
 
 })
 
-app.listen(port,(req,res)=>{
+app.listen(PORT,(req,res)=>{
     console.log("server started");
 })
