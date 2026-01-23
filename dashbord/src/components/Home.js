@@ -13,7 +13,7 @@ const Home = () => {
   return res.json();
     }).then((data)=>{
   setUserDetail(data);
-    })
+    },[])
   });
 
   return (
