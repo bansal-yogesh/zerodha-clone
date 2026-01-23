@@ -7,7 +7,7 @@ setlogin(false);
     }
     return ( <>
     <div class="container">
-         <form action="http://localhost:3005/login" method='post'>
+         <form action="https://zerodha-clone-oqj7.onrender.com/login" method='post'>
             <input placeholder='Enter Your Mobile No.' type='text' name="userMobile"/>
             <br/>
             <input placeholder='Enter Your Password' type='password' name="password"/>
