@@ -41,7 +41,14 @@ app.use(passport.session());
 passport.use(UserModel.createStrategy());
 
 
-
+app.get("/",(req,res)=>{
+    if(req.isAuthenticated()){
+res.redirect("https://main.d1fvy7uj8oerxp.amplifyapp.com/");
+    }
+    else{
+        res.redirect("https://main.d3urnn3mu6ibl1.amplifyapp.com/");
+    }
+})
 app.post("/signup",async(req,res)=>{
 const user_data = req.body;
 console.log(user_data);
@@ -50,19 +57,31 @@ try{
 const user = await UserModel.register({userMobile:user_data.userMobile, email : user_data.email, name :user_data.name}, user_data.password);
   req.login(user, (err) => {
       if (err) return next(err);
-      res.redirect("http://localhost:3001/");
+      res.redirect("https://main.d1fvy7uj8oerxp.amplifyapp.com/");
     });
 
 }
 catch(err){
-res.status(400).json({ error: err.message });
+res.redirect("https://main.d3urnn3mu6ibl1.amplifyapp.com/signup")
 }
 });
 
 app.post("/login", passport.authenticate("local"), (req, res) => {
-  res.render("http://localhost:3001/")
+  res.render("https://main.d1fvy7uj8oerxp.amplifyapp.com/")
 });
 
+app.post("/logout",(req,res)=>{
+     req.logout(err => {
+    if (err) return next(err);
+    res.redirect("https://main.d3urnn3mu6ibl1.amplifyapp.com/signup");
+  });
+});
+
+app.get1("/summary",async(req,res)=>{
+    const data = await UserModel.findById(req.user._id);
+    res.json(data);
+
+})
 
 app.get("/holdings",async(req,res)=>{
 
