@@ -77,7 +77,7 @@ app.post("/logout",(req,res)=>{
   });
 });
 
-app.get1("/summary",async(req,res)=>{
+app.get("/user",async(req,res)=>{
     const data = await UserModel.findById(req.user._id);
     res.json(data);
 
