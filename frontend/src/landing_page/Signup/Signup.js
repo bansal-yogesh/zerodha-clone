@@ -7,7 +7,7 @@ setlogin(true);
     }
     return ( <>
      <div class="container">
-         <form action="http://localhost:3005/signup" method='post'> 
+         <form action=" https://zerodha-clone-oqj7.onrender.com/signup" method='post'> 
          <input placeholder='Enter Your Name' type='text' name="name" required/>
             <br/>
 
