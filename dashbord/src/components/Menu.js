@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Menu = () => {
+const Menu = ({userDetail}) => {
   return (
     <nav class="navbar navbar-expand-lg w-100 pr-5 ">
   <div class="container-fluid">
@@ -38,12 +38,12 @@ const Menu = () => {
 
         <li class="nav-item dropdown">
           <Link class="nav-link dropdown-toggle" to ="/users" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            User
+            {userDetail.name}
           </Link>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="https://zerodha-clone-oqj7.onrender.com/logout">Logout</a></li>
           </ul>
         </li>
       </ul>

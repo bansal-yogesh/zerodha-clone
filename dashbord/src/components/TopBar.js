@@ -2,7 +2,7 @@ import React from "react";
 
 import Menu from "./Menu";
 
-const TopBar = () => {
+const TopBar = ({userDetail}) => {
   return (
     <div className="row  p-0 ">
       <div className="col-4 border border-secondary-subtle d-flex align-items-center shadow-sm"  style={{height : "100px",fontSize:"0.8rem"}}>
@@ -19,7 +19,7 @@ const TopBar = () => {
 </div>
         
       </div>
-      <div className="col-8 border border-secondary-subtle d-flex align-items-center shadow-sm"  style={{height : "100px",fontSize:"0.8rem"}}><Menu /></div>
+      <div className="col-8 border border-secondary-subtle d-flex align-items-center shadow-sm"  style={{height : "100px",fontSize:"0.8rem"}}><Menu userDetail={userDetail}/></div>
     </div>
   );
 };
