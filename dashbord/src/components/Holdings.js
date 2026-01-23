@@ -8,7 +8,7 @@ const Holdings = () => {
 
 const[holdingsvalues,setholdingsvalues]=useState([]);
 useEffect(()=>{
-fetch("http://localhost:3005/holdings").then((res)=>{
+fetch(" https://zerodha-clone-oqj7.onrender.com/holdings").then((res)=>{
 return res.json();
   }).then((data)=>{
 setholdingsvalues(data);
