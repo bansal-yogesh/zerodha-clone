@@ -38,7 +38,7 @@ const Menu = ({userDetail}) => {
 
         <li class="nav-item dropdown">
           <Link class="nav-link dropdown-toggle" to ="/users" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            {userDetail.name}
+            {userDetail?.name || "User"}
           </Link>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
