@@ -15,12 +15,12 @@ const UserSchema = new mongoose.Schema(
     address: { type: String },
 
     // Trading account info
-    accountNumber: { type: String, unique: true },
-    accountType: {
-      type: String,
-      enum: ["demat", "trading"],
-      default: "trading",
-    },
+    // accountNumber: { type: String, unique: true },
+    // accountType: {
+    //   type: String,
+    //   enum: ["demat", "trading"],
+    //   default: "trading",
+    // },
 
     balance: { type: Number, default: 5000 }, // account balance
     fundsDeposited: { type: Number, default: 0 },
