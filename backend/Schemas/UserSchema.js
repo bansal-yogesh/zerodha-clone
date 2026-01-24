@@ -39,6 +39,7 @@ const UserSchema = new mongoose.Schema(
 
 UserSchema.plugin(passportLocalMongoose, {
   usernameField: "userMobile",
+  usernameUnique: false,
 });
 
 module.exports = UserSchema;
