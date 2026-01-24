@@ -57,6 +57,7 @@ try{
 const user = await UserModel.register({userMobile:user_data.userMobile, email : user_data.email, name :user_data.name}, user_data.password);
   req.login(user, (err) => {
       if (err) return next(err);
+      console.log("login inside signup succesfully called without error ");
       res.redirect("https://main.d1fvy7uj8oerxp.amplifyapp.com/");
     });
 
@@ -73,7 +74,8 @@ app.post("/login", passport.authenticate("local"), (req, res) => {
 
 app.post("/logout",(req,res)=>{
      req.logout(err => {
-    if (err) return next(err);signup
+        console.log("logout called");
+    if (err) return next(err);
     res.redirect("/");
   });
 });
