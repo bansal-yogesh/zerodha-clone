@@ -23,12 +23,12 @@ app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true,
-  cookie: { secure: true }
+  ccookie: { secure: true, sameSite: "none" }
 }));
 
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
-app.use(cors({origin: "https://main.d1fvy7uj8oerxp.amplifyapp.com/", // your frontend URL
+app.use(cors({origin: "https://main.d1fvy7uj8oerxp.amplifyapp.com", // your frontend URL
   credentials: true}));
 
 
