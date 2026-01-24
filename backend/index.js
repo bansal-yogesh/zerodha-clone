@@ -62,8 +62,8 @@ const user = await UserModel.register({userMobile:user_data.userMobile, email : 
 
 }
 catch(err){
-    req.send(err)
-// res.redirect("https://main.d3urnn3mu6ibl1.amplifyapp.com/signup")
+   console.log(err);
+res.redirect("https://main.d3urnn3mu6ibl1.amplifyapp.com/signup")
 }
 });
 
