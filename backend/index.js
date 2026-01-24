@@ -28,7 +28,8 @@ app.use(session({
 
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
-app.use(cors());
+app.use(cors({origin: "https://main.d1fvy7uj8oerxp.amplifyapp.com/", // your frontend URL
+  credentials: true}));
 
 
 
@@ -69,7 +70,7 @@ res.redirect("https://main.d3urnn3mu6ibl1.amplifyapp.com/signup")
 });
 
 app.post("/login", passport.authenticate("local"), (req, res) => {
-  res.render("https://main.d1fvy7uj8oerxp.amplifyapp.com/")
+  res.redirect("https://main.d1fvy7uj8oerxp.amplifyapp.com/")
 });
 
 app.post("/logout",(req,res)=>{
@@ -83,8 +84,8 @@ app.post("/logout",(req,res)=>{
 app.get("/user",async(req,res)=>{
 console.log("user rout is called from backend");
 console.log(req.user);
-    const data = await UserModel.findById(req.user._id);
-    res.json(data);
+    // const data = await UserModel.findById(req.user._id);
+    res.json(req.user);
 
 })
 
