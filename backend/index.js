@@ -73,14 +73,23 @@ app.post("/login", passport.authenticate("local"), (req, res) => {
 
 app.post("/logout",(req,res)=>{
      req.logout(err => {
-    if (err) return next(err);
-    res.redirect("https://main.d3urnn3mu6ibl1.amplifyapp.com/signup");
+    if (err) return next(err);signup
+    res.redirect("/");
   });
 });
 
 app.get("/user",async(req,res)=>{
+    if(req.isAuthenticated){
+console.log("user rout is called from backend")
     const data = await UserModel.findById(req.user._id);
     res.json(data);
+
+    }
+
+    else{
+       res.redirect("https://main.d3urnn3mu6ibl1.amplifyapp.com/signup"); 
+    }
+    
 
 })
 
