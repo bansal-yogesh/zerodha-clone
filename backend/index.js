@@ -81,18 +81,10 @@ app.post("/logout",(req,res)=>{
 });
 
 app.get("/user",async(req,res)=>{
-    if(req.isAuthenticated()){
 console.log("user rout is called from backend");
 console.log(req.user);
     const data = await UserModel.findById(req.user._id);
     res.json(data);
-
-    }
-
-    else{
-       res.redirect("https://main.d3urnn3mu6ibl1.amplifyapp.com/signup"); 
-    }
-    
 
 })
 
