@@ -29,7 +29,7 @@ app.use(session({
 
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
-app.use(cors({origin: "https://dashbord.bansaltrades.com", // your frontend URL
+app.use(cors({origin: "https://www.dashbord.bansaltrades.com", // your frontend URL
   credentials: true}));
 
 
@@ -45,10 +45,10 @@ passport.use(UserModel.createStrategy());
 
 app.get("/",(req,res)=>{
     if(req.isAuthenticated()){
-res.redirect("https://dashbord.bansaltrades.com/");
+res.redirect("https://www.dashbord.bansaltrades.com/");
     }
     else{
-        res.redirect("https://home.bansaltrades.com/");
+        res.redirect("https://www.home.bansaltrades.com/");
     }
 })
 app.post("/signup",async(req,res)=>{
@@ -62,25 +62,25 @@ const user = await UserModel.register({userMobile:user_data.userMobile, email : 
       console.log(user);
       console.log("login inside signup succesfully called without error ");
       
-      res.redirect("https://dashbord.bansaltrades.com/");
+      res.redirect("https://www.dashbord.bansaltrades.com/");
     });
 
 }
 catch(err){
    console.log(err);
-res.redirect("https://home.bansaltrades.com/")
+res.redirect("https://www.home.bansaltrades.com/")
 }
 });
 
 app.post("/login", passport.authenticate("local"), (req, res) => {
-  res.redirect("https://dashbord.bansaltrades.com/")
+  res.redirect("https://www.dashbord.bansaltrades.com/")
 });
 
 app.post("/logout",(req,res)=>{
      req.logout(err => {
         console.log("logout called");
     if (err) return next(err);
-    res.redirect("https://bansaltrades.com");
+    res.redirect("https://www.bansaltrades.com");
   });
 });
 
