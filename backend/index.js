@@ -22,8 +22,7 @@ const app = express();
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
-  saveUninitialized: true,
-  cookie: { secure: true, sameSite: "none" }
+  cookie: { secure: true, sameSite: "none", domain : ".bansaltrades.com" }
 }));
 
 app.use(express.json());
@@ -47,7 +46,7 @@ app.get("/",(req,res)=>{
 res.redirect("https://main.d1fvy7uj8oerxp.amplifyapp.com/");
     }
     else{
-        res.redirect("https://main.d3urnn3mu6ibl1.amplifyapp.com/");
+        res.redirect("https://home.bansaltrades.com/");
     }
 })
 app.post("/signup",async(req,res)=>{
