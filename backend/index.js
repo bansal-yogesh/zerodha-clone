@@ -29,7 +29,7 @@ app.use(session({
 
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
-app.use(cors({origin: "https://dashbord.bansaltrades.com/", // your frontend URL
+app.use(cors({origin: "https://dashbord.bansaltrades.com", // your frontend URL
   credentials: true}));
 
 
