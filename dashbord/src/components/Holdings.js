@@ -8,7 +8,7 @@ const Holdings = () => {
 
 const[holdingsvalues,setholdingsvalues]=useState([]);
 useEffect(()=>{
-fetch(" https://bansaltrades.com/holdings").then((res)=>{
+fetch("https://www.bansaltrades.com/holdings").then((res)=>{
 return res.json();
   }).then((data)=>{
 setholdingsvalues(data);
