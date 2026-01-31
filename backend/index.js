@@ -27,7 +27,7 @@ app.use(session({
 
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
-app.use(cors({origin: "https://main.d1fvy7uj8oerxp.amplifyapp.com", // your frontend URL
+app.use(cors({origin: "https://dashbord.bansaltrades.com/", // your frontend URL
   credentials: true}));
 
 
@@ -43,7 +43,7 @@ passport.use(UserModel.createStrategy());
 
 app.get("/",(req,res)=>{
     if(req.isAuthenticated()){
-res.redirect("https://main.d1fvy7uj8oerxp.amplifyapp.com/");
+res.redirect("https://dashbord.bansaltrades.com/");
     }
     else{
         res.redirect("https://home.bansaltrades.com/");
@@ -57,19 +57,21 @@ try{
 const user = await UserModel.register({userMobile:user_data.userMobile, email : user_data.email, name :user_data.name}, user_data.password);
   req.login(user, (err) => {
       if (err) return next(err);
+      console.log(user);
       console.log("login inside signup succesfully called without error ");
-      res.redirect("https://main.d1fvy7uj8oerxp.amplifyapp.com/");
+      
+      res.redirect("https://dashbord.bansaltrades.com/");
     });
 
 }
 catch(err){
    console.log(err);
-res.redirect("https://main.d3urnn3mu6ibl1.amplifyapp.com/signup")
+res.redirect("https://home.bansaltrades.com/")
 }
 });
 
 app.post("/login", passport.authenticate("local"), (req, res) => {
-  res.redirect("https://main.d1fvy7uj8oerxp.amplifyapp.com/")
+  res.redirect("https://dashbord.bansaltrades.com/")
 });
 
 app.post("/logout",(req,res)=>{
@@ -82,6 +84,7 @@ app.post("/logout",(req,res)=>{
 
 app.get("/user",async(req,res)=>{
 console.log("user rout is called from backend");
+console.log("user rout called");
 console.log(req.user);
     // const data = await UserModel.findById(req.user._id);
     res.json(req.user);
