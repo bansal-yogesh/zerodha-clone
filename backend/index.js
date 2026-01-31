@@ -14,14 +14,16 @@ const session = require('express-session')
 const PORT = process.env.PORT || 3000;
 
 
+
 const mongo_url = process.env.MONGO_URL;
 mongoose.connect(mongo_url);
 
 const app = express();
-
+app.set("trust proxy", 1);
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
+  saveUninitialized: false,
   cookie: { secure: true, sameSite: "none", domain : ".bansaltrades.com" }
 }));
 

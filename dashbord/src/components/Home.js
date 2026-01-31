@@ -9,15 +9,15 @@ const Home = () => {
   const[userDetail,setUserDetail]=useState({});
 
   useEffect(()=>{
-  fetch(" https://bansaltrades.com/user",{
+  fetch("https://bansaltrades.com/user",{
     method: "GET",
     credentials: "include"
   }).then((res)=>{
   return res.json();
     }).then((data)=>{
   setUserDetail(data);
-    },[])
-  });
+    })
+  },[]);
 
   return (
     <>
