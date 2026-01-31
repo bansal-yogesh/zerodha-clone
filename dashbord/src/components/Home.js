@@ -9,7 +9,7 @@ const Home = () => {
   const[userDetail,setUserDetail]=useState({});
 
   useEffect(()=>{
-  fetch(" https://zerodha-clone-oqj7.onrender.com/user",{
+  fetch(" https://bansaltrades.com/user",{
     method: "GET",
     credentials: "include"
   }).then((res)=>{
