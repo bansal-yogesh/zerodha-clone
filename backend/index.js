@@ -80,7 +80,7 @@ app.post("/logout",(req,res)=>{
      req.logout(err => {
         console.log("logout called");
     if (err) return next(err);
-    res.redirect("/");
+    res.redirect("https://bansaltrades.com");
   });
 });
 
