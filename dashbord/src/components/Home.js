@@ -21,7 +21,7 @@ const Home = () => {
 
   return (
     <>
-
+<h1>{userDetail.name}</h1>
      <TopBar user = {userDetail}/>
      <Dashboard user = {userDetail}/>
     </>
