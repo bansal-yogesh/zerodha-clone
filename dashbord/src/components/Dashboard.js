@@ -12,7 +12,7 @@ import WatchList from "./WatchList";
 import { useState, useEffect } from "react";
 import BuyFormAction from "./BuyFormAction";
 
-const Dashboard = () => {
+const Dashboard = ({userDetail}) => {
   const [formAction, setFormAction] = useState(null);
   const [actionUuid, setActionUuid] = useState(null);
   const location = useLocation();
@@ -48,7 +48,7 @@ const Dashboard = () => {
        
 
           <Routes>
-            <Route exact path="/" element={<Summary />} />
+            <Route exact path="/" element={<Summary userDetail={userDetail}/>} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/holdings" element={<Holdings />} />
             <Route path="/positions" element={<Positions />} />

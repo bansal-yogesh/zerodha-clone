@@ -1,11 +1,12 @@
 import React from "react";
 
-const Summary = () => {
+const Summary = ({userDetail}) => {
+
   return (
     <>
       <div class="ps-3 pe-3 ">
         <div className="username">
-          <h6 class="fs-4 pt-5 fw-semibold">Hi, User!</h6>
+          <h6 class="fs-4 pt-5 fw-semibold">Hi,{userDetail.name}</h6>
           <hr className="divider" />
         </div>
 
