@@ -43,7 +43,7 @@ const Menu = ({userDetail}) => {
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="https://zerodha-clone-oqj7.onrender.com/logout">Logout</a></li>
+            <li><a class="dropdown-item" href="https://www.bansaltrades.com/logout">Logout</a></li>
           </ul>
         </li>
       </ul>
