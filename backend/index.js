@@ -86,7 +86,7 @@ app.post("/login", (req, res, next) => {
   })(req, res, next);
 });
 
-app.post("/logout",(req,res)=>{
+app.get("/logout",(req,res)=>{
      req.logout(err => {
         console.log("logout called");
     if (err) return next(err);
