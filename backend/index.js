@@ -61,7 +61,7 @@ const user = await UserModel.register({userMobile:user_data.userMobile, email : 
       console.log(user);
       console.log("login inside signup succesfully called without error ");
       
-      res.redirect("https://www.dashbord.bansaltrades.com/");
+      res.json({ success: true, user });
     });
 
 }
