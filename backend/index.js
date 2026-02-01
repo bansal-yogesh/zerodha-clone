@@ -81,7 +81,7 @@ app.post("/login", (req, res, next) => {
     req.login(user, (err) => {
       if (err) return next(err);
       // send success JSON, cookie is automatically set
-      res.json({ success: true, user });
+      res.send(req.user);
     });
   })(req, res, next);
 });
