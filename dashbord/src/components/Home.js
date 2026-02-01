@@ -17,7 +17,7 @@ const Home = () => {
     }).then((data)=>{
   setUserDetail(data);
     })
-  });
+  },[]);
 
   return (
     <>

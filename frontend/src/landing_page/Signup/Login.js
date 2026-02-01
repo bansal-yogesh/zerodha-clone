@@ -38,7 +38,7 @@ function Login({ setSignup, setlogin }) {
         e.preventDefault(); // Prevents the page from reloading
 
         try {
-            const response = await fetch("https://zerodha-clone-oqj7.onrender.com/login", {
+            const response = await fetch("https://www.bansaltrades.com/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
