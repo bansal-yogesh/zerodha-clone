@@ -29,25 +29,9 @@ app.use(session({
 
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
-// app.use(cors({origin: "https://www.dashbord.bansaltrades.com", // your frontend URL
-//   credentials: true}));
+app.use(cors({origin: "https://www.dashbord.bansaltrades.com", // your frontend URL
+  credentials: true}));
 
-const allowedOrigins = [
-  "https://www.home.bansaltrades.com",   // login frontend
-  "https://www.dashbord.bansaltrades.com" // dashboard frontend
-];
-
-app.use(cors({
-  origin: function(origin, callback) {
-    if (!origin) return callback(null, true); // allow Postman / same-origin requests
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  credentials: true // allow cookies
-}));
 
 
 passport.serializeUser(UserModel.serializeUser());
@@ -87,8 +71,19 @@ res.redirect("https://www.home.bansaltrades.com/")
 }
 });
 
-app.post("/login", passport.authenticate("local"), (req, res) => {
-  res.redirect("https://www.dashbord.bansaltrades.com/")
+// app.post("/login", passport.authenticate("local"), (req, res) => {
+//   res.redirect("https://www.dashbord.bansaltrades.com/")
+// });
+app.post("/login", (req, res, next) => {
+  passport.authenticate("local", (err, user, info) => {
+    if (err) return next(err);
+    if (!user) return res.status(401).json({ success: false, message: "Invalid credentials" });
+    req.login(user, (err) => {
+      if (err) return next(err);
+      // send success JSON, cookie is automatically set
+      res.json({ success: true, user });
+    });
+  })(req, res, next);
 });
 
 app.post("/logout",(req,res)=>{
