@@ -3,11 +3,11 @@ function Education() {
     return ( 
         <div className='container mt-5'>
             <div className='row mt-5'>
-                <div className='col-6  d-flex justify-content-end'>
-                    <img src='media/images/index-education.svg' />
+                <div className='col-12 col-lg-6  d-flex '>
+                    <img src='media/images/index-education.svg'class="img-fluid" />
                 </div>
                 <div className='col-1'></div>
-                <div className='col-5 pt-4 mt-5 '>
+                <div className='col-11 col-lg-5 pt-4 mt-5 '>
                     <div className='ml-5'>
                     <h2 className='fs-4 text-muted'>Free and open market education</h2>
                     <br/>

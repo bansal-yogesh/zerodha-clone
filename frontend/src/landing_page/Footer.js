@@ -5,7 +5,7 @@ function Footer() {
         <div className='container-fluid border-top' style={{backgroundColor : "#fbfbfb"}}>
       <div className='container  ' style={{backgroundColor : "#fbfbfb"}}>
 <div className='row mt-5 mb-5' >
-    <div className='col'>
+    <div className='col-8 col-lg mb-5 mb-lg-0'>
             <img src="media/images/logo.svg" style={{width : "60%"}}></img>
             <p>© 2026 Yogesh. All rights reserved.</p>
             <a href=''><i class="fa-brands fa-x-twitter"></i></a>
@@ -18,7 +18,7 @@ function Footer() {
             <a href=''><i class="fa-brands fa-telegram"></i></a>
 
     </div>
-    <div className='col text-muted '>
+    <div className='col-4 col-lg text-muted mb-5 mb-lg-5'>
 <h1 className='fs-4'>Accounts</h1>
 
 <a href='' className='text-decoration-none text-muted'>Open demat account</a><br/>
@@ -32,7 +32,7 @@ function Footer() {
     
 
     </div>
-    <div className='col'>
+    <div className='col-4 col-lg'>
 <h1 className='fs-4'>Support</h1>
 
     <a href='' className='text-decoration-none text-muted'>Contact us</a><br/>
@@ -44,7 +44,7 @@ function Footer() {
     <a href='' className='text-decoration-none text-muted'>Z-Connect blog</a><br/>
     <a href='' className='text-decoration-none text-muted'>Downloads</a><br/>
     </div>
-    <div className='col'>
+    <div className='col-4 col-lg'>
 <h1 className='fs-4'>Company</h1>
 <a href='' className='text-decoration-none text-muted'>About</a><br/>
 <a href='' className='text-decoration-none text-muted'>Philosophy</a><br/>
@@ -54,7 +54,7 @@ function Footer() {
 <a href='' className='text-decoration-none text-muted'>Zerodha.tech</a><br/>
 <a href='' className='text-decoration-none text-muted'>Open source</a><br/>
     </div>
-    <div className='col'>
+    <div className='col-4 col-lg'>
 <h1 className='fs-5 text-dark'>Quick links</h1>
 <a href='' className='text-decoration-none text-muted'>Upcoming IPOs</a><br/>
 <a href='' className='text-decoration-none text-muted'>Brokerage charges</a><br/>

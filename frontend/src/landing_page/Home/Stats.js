@@ -3,7 +3,7 @@ function Stats() {
     return ( <div class="container mt-5 mb-5 ">
             <div class="row ml-5">
                 <div className='col-1'></div>
-                <div class="col-4 ">
+                <div class="col-11 col-lg-4 ">
                     <h2 className="text-muted fs-2">Trust with confidence</h2>
                     <br />
                     <br />
@@ -31,13 +31,13 @@ function Stats() {
                     <br />
                 </div>
 
-                <div class="col-6">
+                <div class="col-11 col-lg-6">
                     <img src='media/images/ecosystemAward.png' className='img-fluid w-100 h-auto' alt='Images' />
                 </div>
 
             </div>
             <div  className='text-center mb-5'>
-                <img src='media/images/pressLogos.png' className=' mb-5'/>
+                <img src='media/images/pressLogos.png' className=' img-fluid'/>
             </div>
 
         </div> );

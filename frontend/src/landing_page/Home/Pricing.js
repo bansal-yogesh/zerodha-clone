@@ -6,7 +6,7 @@ function Pricing() {
       <div className="row mt-5">
         <div className="col-1">
         </div>
-        <div className="col-4">
+        <div className="col-11 col-lg-4">
           <h1 className="fs-3 text-muted fw-semibold">Unbeatable pricing</h1>
           <br/>
           <p>
@@ -19,7 +19,7 @@ function Pricing() {
         </div>
         
 
-        <div className="col-7 ">
+        <div className="col-11 col-lg-7 ">
           <div className="row mt-3">
             <div className="col d-flex align-items-center">
               <img
