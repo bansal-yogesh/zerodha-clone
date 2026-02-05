@@ -13,8 +13,8 @@ Now, we are breaking ground with our technology.
             </div>
 
             <div class="row mt-5 pt-5 fs-6 fw-semibold text-muted mb-5">
-                <div class ="col-2"></div>
-                <div class="col-4">
+                <div class ="col-0 col-lg-2"></div>
+                <div class="col-12 col-lg-4">
                     <p>
                         We kick-started operations on the 15th of August, 2010 with the goal of breaking all barriers that traders and investors face in India in terms of cost, support, and technology. We named the company Zerodha, a combination of Zero and "Rodha", the Sanskrit word for barrier.
                     </p>
@@ -26,7 +26,7 @@ Now, we are breaking ground with our technology.
                     </p>
                 </div>
                 
-                <div class="col-4">
+                <div class="col-12 col-lg-4">
                     <p>
                         In addition, we run a number of popular open online educational and community initiatives to empower retail traders and investors.
                     </p>
@@ -37,7 +37,7 @@ Now, we are breaking ground with our technology.
                         And yet, we are always up to something new every day. Catch up on the latest updates on our blog or see what the media is saying about us or learn more about our business and product philosophies.
                     </p>
                 </div>
-                <div class ="col-2"></div>
+                <div class ="col-0 col-lg-2"></div>
             </div>
         </div>
         </>

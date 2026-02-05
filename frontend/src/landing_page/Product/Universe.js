@@ -12,10 +12,11 @@ function Universe() {
           </p>
         </div>
         <div class="row">
-          <div class="col-2"></div>
-          <div class="col-2 p-3">
-            <img
+          <div class="col-0 col-lg-2"></div>
+          <div class="col col-lg-2 p-3">
+            <img 
               src="media/images/zerodhaFundhouse.png"
+              class="img-fluid"
               style={{ height: "60px", width: "180px" }}
             />
             <p
@@ -27,9 +28,10 @@ function Universe() {
             </p>
           </div>
           <div class="col-1"></div>
-          <div class="col-2 p-3">
+          <div class="col col-lg-2 p-3">
             <img
               src="media/images/sensibullLogo.svg"
+              class="img-fluid"
               style={{ height: "60px", width: "180px" }}
             />
             <p
@@ -42,9 +44,10 @@ function Universe() {
             </p>
           </div>
           <div class="col-1"></div>
-          <div class="col-2 p-3">
+          <div class="col col-lg-2 p-3">
             <img
               src="media/images/tijori.svg"
+              class="img-fluid"
               style={{ height: "60px", width: "180px" }}
             />
             <p
@@ -55,13 +58,14 @@ function Universe() {
               stocks, sectors, supply chains, and more.
             </p>
           </div>
-          <div class="col-2"></div>
+          <div class="col-0 col-lg-2"></div>
         </div>
         <div class="row">
-          <div class="col-2"></div>
-          <div class="col-2 p-3">
+          <div class="col-0 col-lg-2"></div>
+          <div class="col col-lg-2 p-3">
             <img
               src="media/images/streakLogo.png"
+              class="img-fluid"
               style={{ height: "60px", width: "180px" }}
             />
             <p
@@ -73,9 +77,10 @@ function Universe() {
             </p>
           </div>
           <div class="col-1"></div>
-          <div class="col-2 p-3">
+          <div class="col col-lg-2 p-3">
             <img
               src="media/images/smallcaseLogo.png"
+              class="img-fluid"
               style={{ height: "60px", width: "180px" }}
             />
             <p
@@ -87,9 +92,10 @@ function Universe() {
             </p>
           </div>
           <div class="col-1"></div>
-          <div class="col-2 p-3">
+          <div class="col col-lg-2 p-3">
             <img
               src="media/images/dittoLogo.png"
+              class="img-fluid"
               style={{ height: "60px", width: "180px" }}
             />
             <p
@@ -100,7 +106,7 @@ function Universe() {
               mis-selling.
             </p>
           </div>
-          <div class="col-2"></div>
+          <div class="col-0 col-lg-2"></div>
           <div className="text-center p-5 mb-5">
 <button className = "btn btn-primary ">Sign up for Free</button>
 </div>
