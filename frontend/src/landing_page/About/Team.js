@@ -11,7 +11,7 @@ function Team() {
     <div class="col-0 col-lg-2"></div>
     <div class="col-12 col-lg-4">
         <div class="text-center" >
-            <img class="border border-dark mb-4 img-fluid" src='/media/images/yogesh.jpeg' alt='Founder'style={{height : "20rem" ,width : "20rem",borderRadius : "50%"}}/>
+            <img class="border border-dark mb-4 img-fluid" src='/media/images/yogesh.jpg' alt='Founder'style={{height : "20rem" ,width : "20rem",borderRadius : "50%"}}/>
             <h5>Yogesh Bansal</h5>
         <p class="mt-3 text-muted">Founder, CEO</p>
         </div>
