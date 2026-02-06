@@ -5,8 +5,8 @@ function Equity() {
     <>
       <div class="container">
         <div class="row pt-5 pb-5">
-          <div class="col-1"></div>
-          <div class="col-10">
+          <div class="col-0 col-lg-1"></div>
+          <div class="col-12 col-lg-10 table-responsive">
             <table class="text-muted border " style={{ fontSize: "0.8rem " }}>
               <tr class="border">
                 <th class="p-3"> &nbsp; </th>
@@ -76,7 +76,7 @@ BSE: 0.0325% (on premium)</td>
 
             </table>
           </div>
-          <div class="col-1"></div>
+          <div class="col-0 col-lg-1"></div>
         </div>
       </div>
     </>
