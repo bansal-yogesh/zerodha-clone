@@ -17,6 +17,12 @@ const Menu = ({userDetail}) => {
         <li class="nav-item">
           <Link class="nav-link active" aria-current="page" to="/">Dashboard</Link>
         </li>
+        <li class="nav-item ">
+          <Link class="nav-link active" aria-current="page" to="/portfolio">Portfolio</Link>
+        </li>
+        <li class="nav-item ">
+          <Link class="nav-link active" aria-current="page" to="/watchlist">WatchList</Link>
+        </li>
         <li class="nav-item">
           <Link class="nav-link" to="/orders">Orders</Link>
         </li>
