@@ -88,7 +88,7 @@ function Login({ setSignup, setlogin }) {
             </form> */}
 <div class="row d-flex justify-content-center pt-5 pb-5 mt-5 mb-5">
     <div class="col-11 col-lg-6 p-5 m-5 border border-2 border-muted rounded-4 shadow-sm">
-      <form>
+      <form onSubmit={handleLogin}>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">
             Mobile No.
