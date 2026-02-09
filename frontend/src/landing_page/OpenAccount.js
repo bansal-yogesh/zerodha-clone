@@ -1,6 +1,15 @@
 import React from 'react';
+import {useNavigate} from 'react-router-dom';
 
 function OpenAccount() {
+
+
+    const navigate = useNavigate();
+    const signClick=()=>{
+       navigate('/signup');
+        
+    }
+
     return ( 
         <div className = 'container pt-5 mt-5' >
            
@@ -9,7 +18,7 @@ function OpenAccount() {
 
                 <p className="text-center text-muted fw-normal"> Modern platforms and apps, ₹0 investments, and flat ₹20 intraday and F&O trades</p>
 <div className="text-center mb-5">
-<button className = "btn btn-primary ">Sign up for Free</button>
+<button className = "btn btn-primary " onClick={signClick}>Sign up for Free</button>
 </div>
                 
             </div>

@@ -23,7 +23,8 @@ root.render(
   <Route path='about' element={<About/>}></Route>
   <Route path='/pricing/*' element ={<Pricing/>}>
 
-  <Route path="equity" element={<Equity/>}></Route>
+  {/* <Route path="equity" element={<Equity/>}></Route> */}
+  <Route index element = {<Equity/>}></Route>
   </Route>
 
   <Route path='/products' element ={<Product/>}></Route>

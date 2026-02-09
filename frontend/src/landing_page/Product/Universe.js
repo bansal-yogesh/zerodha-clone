@@ -1,6 +1,12 @@
 import React from "react";
-
+import {useNavigate} from 'react-router-dom';
 function Universe() {
+
+  const navigate = useNavigate();
+    const signClick=()=>{
+       navigate('/signup');
+        
+    }
   return (
     <>
       <div class="container mt-5 pt-5">
@@ -108,7 +114,7 @@ function Universe() {
           </div>
           <div class="col-0 col-lg-2"></div>
           <div className="text-center p-5 mb-5">
-<button className = "btn btn-primary ">Sign up for Free</button>
+<button className = "btn btn-primary " onClick={signClick}>Sign up for Free</button>
 </div>
         </div>
       </div>
